@@ -51,14 +51,17 @@ public static void Arithmetic_Operators(){
     Pass_Mark = 120;
     Total = Math+Science+Biology+History;
 
+     // Using JAVA And Operators (&&)
+
     if(Total>=Pass_Mark && Math>=30 && Science>=30 && Biology>=30 && History>=30){
        
         System.out.println("Your Passed Your Exam With "+ (Total) +" Marks. And You Don't Need To Give Re-Test.");
     }
     else{
         System.out.println("Your Are Failed In This Exam With "+ (Total) +" Marks. And You'r Failed In One Exam That You Have To Give The Re-Test.");
-
     }
+
+     // Using JAVA OR Operators (||)
 
     if (Math >= 30 || Science >=30 || Biology >= 30 || History >=30){
        
@@ -67,8 +70,12 @@ public static void Arithmetic_Operators(){
     else{
         System.out.println("You Are Passed In The Exam."); 
     }
-
-
  }
+
+// 5. Bitwise Operators In Java --------> (&,|,^,<<,>>)
+public static void Bitwise_Operators(){
+
+}
+
 
 }
