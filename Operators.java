@@ -8,11 +8,11 @@ public static void Arithmetic_Operators(){
     int a = 20;
     int b = 10;
 
-    System.out.println("The Addition Of a and b is : " + (a+b));
-    System.out.println("The Subtraction Of a and b is : " + (a-b));
-    System.out.println("The Multiplication Of a and b is : " + (a*b));
-    System.out.println("The Division Of a and b is : " + (a/b));
-    System.out.println("The Modulo Of a and b is : " + (a%b));
+    System.out.println("The Addition Of a and b is : " + (a+b));         //1. Addition
+    System.out.println("The Subtraction Of a and b is : " + (a-b));     // 2. Subtraction
+    System.out.println("The Multiplication Of a and b is : " + (a*b)); //  3. Multiplication
+    System.out.println("The Division Of a and b is : " + (a/b));      //   4. Division
+    System.out.println("The Modulo Of a and b is : " + (a%b));       //    5. Modulo
 }
 
 // Assignment Operators In Java
