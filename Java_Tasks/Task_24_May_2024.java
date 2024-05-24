@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class Task_24_May_2024 {
     public static void main(String[] args) {
+        
         Swap_2_Numbers();
         Simple_Interest();
+        Factorial_Number();
     }
 
     // Task -1 ------> Swap 2 Numbers In Java
@@ -13,7 +17,7 @@ public class Task_24_May_2024 {
          System.err.println("The Value Of Second_Number = " + Second_Number);
 
 
-         // Storing Values In A Temperary Variable 
+         // Storing Values In A Temporary Variable 
          int Temp_Value = First_Number;
          First_Number = Second_Number;
          Second_Number = Temp_Value;
@@ -21,7 +25,27 @@ public class Task_24_May_2024 {
          System.err.println(" ---------  Numbers After Swap  ---------");
          System.err.println("The Value Of First_Number = " + First_Number);
          System.err.println("The Value Of Second_Number = " + Second_Number);
-         
+    }
+
+
+    // Task -3 ------> Calculate Simple Interest In Java
+    public static void Factorial_Number(){
+        Scanner Number= new Scanner(System.in);
+        int R,Factorial_Number = 1;
+        System.out.println("Please Enter Your Number : ");
+        int Given_Number=Number.nextInt();
+
+        for (R=1;R<=Given_Number;R++){
+            Factorial_Number=Factorial_Number*R;
+            System.out.println("Factorial Of : "+ Given_Number + " Is " + Factorial_Number);
+        }
+
+
+
+
+
+       
+      
     }
 
     // Task -5 ------> Calculate Simple Interest In Java
