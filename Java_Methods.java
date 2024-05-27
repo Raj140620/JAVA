@@ -5,7 +5,7 @@ public class Java_Methods{
         return("Hello World"); // ------> I Have To Specify The String Data Type Of Method TO store My Strings .    
      }
 
-     static void Raj(){
+     static void Raj(){      //  -------> We Use Void To Store Multiple Data Types
         int Number = 23;
         String Word = "Raj Kumar";
         System.out.println(Number);
