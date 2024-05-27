@@ -36,7 +36,7 @@ public class Task_24_May_2024 {
         int Given_Number=Number.nextInt();
 
         for (R=1;R<=Given_Number;R++){
-            Factorial_Number=Factorial_Number*R;
+            Factorial_Number *= R;
             System.out.println("Factorial Of : "+ Given_Number + " Is " + Factorial_Number);
         }
 
