@@ -2,7 +2,8 @@ class Task_28_May_2024 {
     public static void main(String[] arg) {
         // Area_Of_Circle;              // ------------->  Un-Comment This And The Below Function To Run This 
         //Greet();                     // ------------->  Un-Comment This And The Below Function To Run This 
-        //Area_Of_Rectangle();;         // ------------->  Un-Comment This And The Below Function To Run This 
+        //Area_Of_Rectangle();        // ------------->  Un-Comment This And The Below Function To Run This 
+        Calculator();                // ------------->  Un-Comment This And The Below Function To Run This 
     }
 
     // ---------------> Question -1 <-----------------
@@ -62,5 +63,40 @@ class Task_28_May_2024 {
       
     //     System.out.println("You Entered  " + Radius_Number + ". So The Area Of The Circle Is  : " + Area);
     // }
+
+
+    // ---------------> Question -4 <-----------------
+
+
+    public static void Calculator(){
+        System.err.println("-----------------   Question N0 - 4    -----------------");
+        System.err.println(" ---------  Calculator  ---------");
+        java.util.Scanner Values = new java.util.Scanner(System.in);
+        System.out.println("Please Enter Your First Number");
+        int First_Number = Values.nextInt();
+        System.out.println("Please Enter Your First Number");
+        int Second_Number = Values.nextInt();
+        System.out.println("Please Choose The Number According Your Operator   + => 1  , - => 2  , * => 3 ,  / => 4  ");
+        int Operator = Values.nextInt();
+
+        if( Operator == 1){
+            System.out.println("You Have Choose Addition, So Addition Of Your 2 Numbers Is : " + (First_Number+Second_Number) );
+        }
+        if( Operator == 2){
+            System.out.println("You Have Choose Subtraction, So Subtraction Of Your 2 Numbers Is : " + (First_Number-Second_Number) );
+        }
+        if( Operator == 3){
+            System.out.println("You Have Choose Multiplication, So Multiplication Of Your 2 Numbers Is : " + (First_Number*Second_Number) );
+        }
+        if( Operator == 4){
+            System.out.println("You Have Choose Division, So Division Of Your 2 Numbers Is : " + (First_Number/Second_Number) );
+        }
+        if(Operator != 1 && Operator != 2 && Operator != 3 && Operator != 4 ){
+            System.out.println("You Have Choose The Wrong Number Please Choose Between (1 ,2 ,3 ,4) . Thank You.");
+        }
+
+    }
+
+
 
 }
