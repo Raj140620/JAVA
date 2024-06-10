@@ -1,6 +1,5 @@
 public class Student_Manager {
-    static int Physics,Chemistry,Mathematics,It;
-    static String Length_Of_Name;
+    static int Physics,Chemistry,Mathematics,It ,Operation_Value;
     public void Main_Two(){
         java.util.Scanner Operation_Data = new java.util.Scanner(System.in);
         System.out.println("Please Choose Your Number According To The Operation :");
@@ -10,6 +9,8 @@ public class Student_Manager {
         System.out.println(" 4. Update Grades");
         System.out.println(" 5. Generate Report");
         int Operation = Operation_Data.nextInt();
+        this.Operation_Value = Operation;
+
         
         if(Operation == 1){
             Add_Student();
@@ -39,7 +40,6 @@ public class Student_Manager {
         System.err.println("-----------------   Step - 1 Add Student Section   -----------------");
         System.out.println("Please Enter Your Name :");
         String Student_Name = Student_Data.nextLine();
-        this.Length_Of_Name = Student_Name;
         System.out.println("Please Enter Your E-mail :");
         String Student_Email = Student_Data.nextLine();
         System.out.println("Please Verify Your Details And Press Enter. Name = " + Student_Name + " , And Email = " + Student_Email);
@@ -49,11 +49,8 @@ public class Student_Manager {
     }
     // The Add Student Subject Marks Method ( Where We Can Add Students Subject Marks)
     public void Add_Subject_Marks(){
-
-        int Length = Length_Of_Name.length();
-        if (Length < 0){
+        if ( Operation_Value == 2 || Operation_Value ==3 || Operation_Value ==3 || Operation_Value == 4 ||Operation_Value ==5){
             System.out.println("Error :} Hey You Missed The 1st Step , Please Complete 1st Step First :" );
-            Add_Student();
         }
         else{
             java.util.Scanner Subject_Number = new java.util.Scanner(System.in);
@@ -93,15 +90,102 @@ public class Student_Manager {
     }
 
     public void Calculate_GPA(){
-        System.err.println("-----------------  Update Grade Section    -----------------");
-        System.out.println("Your Total  Marks Is "+(this.Physics+this.Chemistry+this.Mathematics+this.It));
+        System.err.println("-----------------  Calculate GPA Section    -----------------");
+        if(this.Physics > 0){
+            int Total_Marks =(Physics + Chemistry + Mathematics + It);
+            int Percentage = ((Total_Marks)/4);
+            int Average = ((Total_Marks)/4);
+            System.out.println(" -----  Hey, You Have Secured Total " + (Total_Marks) +" Marks .  -----");
+            System.out.println(" -----  Hey, You Have Secured Percentage Of " + (Percentage) +"% .  -----");
+            System.out.println(" -----  Hey, Your Average Mark Is " + (Average) +"  ----- ");
+
+            if (Percentage >= 90){
+                System.out.println(" -----  Hey Congratulations You Have Passed The Exam :) , And You Got  ' A ' Grade With " +(Total_Marks)/4 +"% .  ----- ");
+            }
+            else if(Percentage >= 70){
+                System.out.println(" -----  Hey Congratulations You Have Passed The Exam :) , And You Got  ' B ' Grade With " +(Total_Marks)/4 +"% .  -----");
+
+            }
+            else if(Percentage >= 50){
+                System.out.println(" -----  Hey Congratulations You Have Passed The Exam :) , And You Got  ' C ' Grade With " +(Total_Marks)/4 +"% .  -----");
+
+            }
+            else if(Percentage >= 30){
+                System.out.println(" -----  Hey Congratulations You Have Passed The Exam :) , And You Got  ' D ' Grade With " +(Total_Marks)/4 +"% .  ----- ");
+
+            }
+            else if(Percentage < 30){
+                System.out.println(" -----  Hey You Failed In Your Exam  :} , And You Only Get " +(Total_Marks)/4 +"% .  -----");
+
+            }
+           
+
+        }
+
+        else{
+            System.out.println("Hey Please Enter Your Marks And Details First :) ");
+        }
     }
 
     public  void Update_Grades(){
         
         System.err.println("-----------------  Update Grade Section    -----------------");
 
-        System.out.println("This Is From Update Grades");
+        if (Physics < 0){
+            System.out.println("Hey Please Enter Your Marks And Details First :) ");
+        }
+        else{
+            java.util.Scanner Update_Subject = new java.util.Scanner(System.in);
+            System.out.println("Hey Please The Number That You Want To Update The Subject Marks ");
+            System.out.println(" 1. Update Physics Marks :");
+            System.out.println(" 2. Update Chemistry Marks :");
+            System.out.println(" 3. Update Mathematics Marks :");
+            System.out.println(" 4. Update It Marks :");
+
+            int Update_Subject_Value = Update_Subject.nextInt();
+
+            if (Update_Subject_Value == 1){
+                System.out.println(" So You Want To Update Physics Marks Which Is " + Physics + " Right Now .");
+                System.out.println("Please Enter Your New  Marks For Physics : ");
+                int New_Physics_Marks = Update_Subject.nextInt();
+                System.out.println("Hey We Updated Your Marks Of Physics From  " +Physics + " To " + New_Physics_Marks + " :)");
+
+                
+            }
+            else if (Update_Subject_Value == 2){
+                System.out.println(" So You Want To Update Chemistry Marks Which Is " + Chemistry + " Right Now .");
+                System.out.println("Please Enter Your New  Marks For Chemistry : ");
+                int New_Chemistry_Marks = Update_Subject.nextInt();
+                System.out.println("Hey We Updated Your Marks Of Chemistry From  " +Chemistry + " To " + New_Chemistry_Marks + " :)");
+
+                
+            }
+            else if (Update_Subject_Value == 3){
+                System.out.println(" So You Want To Update Mathematics Marks Which Is " + Mathematics + " Right Now .");
+                System.out.println("Please Enter Your New  Marks For Mathematics : ");
+                int New_Mathematics_Marks = Update_Subject.nextInt();
+                System.out.println("Hey We Updated Your Marks Of Mathematics From  " +Mathematics + " To " + New_Mathematics_Marks + " :)");
+
+                
+            }
+            else if (Update_Subject_Value == 1){
+                System.out.println(" So You Want To Update It Marks Which Is " + It + " Right Now .");
+                System.out.println("Please Enter Your New  Marks For It : ");
+                int New_It_Marks = Update_Subject.nextInt();
+                System.out.println("Hey We Updated Your Marks Of It From  " +Physics + " To " + New_It_Marks + " :)");
+
+                
+            }
+            else if (Update_Subject_Value == 5){
+                System.out.println(" So You Want To Update Your All The Marks :) ");
+                
+
+
+            }
+
+            
+        }
+
     }
 
     public void Generate_Report(){
