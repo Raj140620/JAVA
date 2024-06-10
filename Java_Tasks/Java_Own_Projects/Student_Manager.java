@@ -141,14 +141,22 @@ public class Student_Manager {
             System.out.println(" 2. Update Chemistry Marks :");
             System.out.println(" 3. Update Mathematics Marks :");
             System.out.println(" 4. Update It Marks :");
+            System.out.println(" 5. Update All Subject Marks :");
+
 
             int Update_Subject_Value = Update_Subject.nextInt();
 
             if (Update_Subject_Value == 1){
+                
                 System.out.println(" So You Want To Update Physics Marks Which Is " + Physics + " Right Now .");
                 System.out.println("Please Enter Your New  Marks For Physics : ");
                 int New_Physics_Marks = Update_Subject.nextInt();
+                if (New_Physics_Marks <= 100){
                 System.out.println("Hey We Updated Your Marks Of Physics From  " +Physics + " To " + New_Physics_Marks + " :)");
+                }
+                else {
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                }
 
                 
             }
@@ -156,28 +164,82 @@ public class Student_Manager {
                 System.out.println(" So You Want To Update Chemistry Marks Which Is " + Chemistry + " Right Now .");
                 System.out.println("Please Enter Your New  Marks For Chemistry : ");
                 int New_Chemistry_Marks = Update_Subject.nextInt();
+                if(New_Chemistry_Marks <= 100){
                 System.out.println("Hey We Updated Your Marks Of Chemistry From  " +Chemistry + " To " + New_Chemistry_Marks + " :)");
+                }
+                else{
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                    
 
+                }
                 
             }
             else if (Update_Subject_Value == 3){
                 System.out.println(" So You Want To Update Mathematics Marks Which Is " + Mathematics + " Right Now .");
-                System.out.println("Please Enter Your New  Marks For Mathematics : ");
+                System.out.println("Please Enter Your New  Marks For Mathematics :) ");
                 int New_Mathematics_Marks = Update_Subject.nextInt();
+                if(New_Mathematics_Marks <= 100){
                 System.out.println("Hey We Updated Your Marks Of Mathematics From  " +Mathematics + " To " + New_Mathematics_Marks + " :)");
-
+                }
+                else{
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                }
                 
             }
             else if (Update_Subject_Value == 1){
                 System.out.println(" So You Want To Update It Marks Which Is " + It + " Right Now .");
                 System.out.println("Please Enter Your New  Marks For It : ");
                 int New_It_Marks = Update_Subject.nextInt();
+                if(New_It_Marks <= 100){
                 System.out.println("Hey We Updated Your Marks Of It From  " +Physics + " To " + New_It_Marks + " :)");
+                }
+
+
+                else{
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                }
 
                 
             }
             else if (Update_Subject_Value == 5){
                 System.out.println(" So You Want To Update Your All The Marks :) ");
+                System.out.println("Please Enter Your New  Marks For Physics : ");
+                int All_New_Physics_Marks = Update_Subject.nextInt();
+                if (All_New_Physics_Marks <= 100){
+                System.out.println("Please Enter Your New  Marks For Chemistry : ");
+                }
+                else{
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                }
+                int All_New_Chemistry_Marks = Update_Subject.nextInt();
+                if(All_New_Chemistry_Marks <= 100){
+                System.out.println("Please Enter Your New  Marks For Mathematics : ");
+                }
+                else{
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                }
+                int All_New_Mathematics_Marks = Update_Subject.nextInt();
+                if(All_New_Mathematics_Marks <= 100){
+                System.out.println("Please Enter Your New  Marks For It : ");
+                }
+                else{
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                }
+                int All_New_It_Marks = Update_Subject.nextInt();
+                if(All_New_It_Marks <= 100){
+                System.out.println("Hey We Updated Your Marks Successfully :)" );
+                }
+                else{
+                    System.out.println("Error, Hey Please Enter Number Below Or Equal to 100 :} ");
+                }
+
+                System.err.println("-----------------  Your Updated Grades Are    -----------------");
+
+                System.out.println(" -----  Hey, Your Updated Total Mark Is " + (All_New_Physics_Marks+All_New_Chemistry_Marks+All_New_Mathematics_Marks+All_New_It_Marks) +" Marks .  -----");
+                System.out.println(" -----  Hey, Your Updated Percentage Is " + (All_New_Physics_Marks+All_New_Chemistry_Marks+All_New_Mathematics_Marks+All_New_It_Marks)/4 +"% .  -----");
+                System.out.println(" -----  Hey, Your Updated Average Mark Is " + (All_New_Physics_Marks+All_New_Chemistry_Marks+All_New_Mathematics_Marks+All_New_It_Marks)/4 +" Marks .  -----");
+
+
                 
 
 
